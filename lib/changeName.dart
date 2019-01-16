@@ -40,7 +40,7 @@ class _EditNamePageState extends State<EditNamePage> {
                       _nameController.text = '';                      
                     });
                     Scaffold.of(context).showSnackBar(
-                      SnackBar(content: Text('name changed to ${model.name}'))
+                      SnackBar(content: Text('Name changed to ${model.name}'))
                     );
                   }
                 )
