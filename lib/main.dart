@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: ScopedModelDescendant<User>(
           builder: (context, child, model) {
-            return Text(model.name, style: TextStyle(fontSize: 30.0),);
+            return Text('${model.name} 🤭', style: TextStyle(fontSize: 30.0),);
           },
         )
       ),

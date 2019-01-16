@@ -23,9 +23,10 @@ class _EditNamePageState extends State<EditNamePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  '${model.name}',
+                  '${model.name} 😮',
                   style: TextStyle(fontSize: 25.0),
                 ),
+                SizedBox(height: 30,),
                 TextField(
                   controller: _nameController,
                   decoration: InputDecoration(
@@ -35,12 +36,17 @@ class _EditNamePageState extends State<EditNamePage> {
                 RaisedButton(
                   child: Text('Update Name'),
                   onPressed: () {
+                    if (_nameController.text == '') {
+                      return Scaffold.of(context).showSnackBar(
+                        SnackBar(content: Text('Please Input a Name 🙄')),
+                      );
+                    }
                     model.changeName(_nameController.text);
                     setState(() {
                       _nameController.text = '';                      
                     });
                     Scaffold.of(context).showSnackBar(
-                      SnackBar(content: Text('Name changed to ${model.name}'))
+                      SnackBar(content: Text('Name changed to ${model.name} 😅'))
                     );
                   }
                 )
