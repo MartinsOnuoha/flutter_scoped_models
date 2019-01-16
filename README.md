@@ -1,4 +1,4 @@
-# scoped_example
+# Flutter Scoped Models
 
 Simple Scoped Model Example in Flutter
 
